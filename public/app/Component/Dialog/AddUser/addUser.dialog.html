@@ -1,0 +1,55 @@
+<script type="text/ng-template" id="templateAddUserDialog">
+    <div id="target" ng-controller="addUserControllerDialog" >
+
+        <div layout="row"  layout-sm="column">
+            <div  flex>
+                <div ng-hide="hideDefaultPicture" class="ng-hide">
+                    <img class="img-responsive" id="largePhoto" src="app/images/Default.png"   ngf-resize="{width: 50, height: 50}">
+                </div>
+
+                <div ng-show="showUpdatedPicture">
+                    <img class="img-responsive"  ngf-src="file"  ngf-background="file" >
+                </div>
+            </div>
+        </div>
+
+        <div layout="column" >
+            <div layout="row"  class = "find-file-add"  flex>
+                <input type="file"
+                       onchange="angular.element(this).scope().refreshPicture()" id="file"
+                       name="file" accept="image/*" value="" ngf-select ng-model="file" flex >
+            </div>
+         </div>
+
+         <div layout="column"  layout-sm="column" flex>
+             <label  flex >RECHERCHER UN COLLABORATEUR : </label>
+             <div  flex>
+                 <input class = "find-file-add" ng-keyup ="searchLDAP()" type="text" required data-ng-model="searchStr"
+                        ng-model-options="{debounce: 1000}"/>
+             </div>
+         </div>
+
+        <div layout="column"  layout-sm="column" flex>
+            <select ng-show="usersFromLDAP.length > 0"  ng-model = 'userSelected' ng-options=" userFromLdap.lastName+
+                    ' ' + userFromLdap.forename for userFromLdap in usersFromLDAP">
+                <option value="">-- Choisir un collab --</option>
+            </select>
+        </div>
+
+        <div layout="column"  layout-sm="column" flex>
+            <label for="lastName-newCollab">NOM</label>
+            <input id="lastName-newCollab" name="firstName-newCollab"
+            type="text" required  ng-model="userSelected.lastName" disabled="disabled"  />
+        </div>
+
+        <div layout="column"  layout-sm="column"  flex>
+            <label for="firstName-newCollab">PRENOM</label>
+            <input id="firstName-newCollab" name="firstName-newCollab"
+            type="text" required  ng-model="userSelected.forename" disabled="disabled"  />
+        </div>
+
+        <div layout="row" layout-margin flex>
+            <md-button flex class="md-raised md-button" ng-click="addNewUser(userSelected,file)">Ajouter au Trombi</md-button>
+        </div>
+    </div>
+</script>

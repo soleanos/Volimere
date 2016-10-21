@@ -1,0 +1,52 @@
+<!-- Header & Footer -->
+<div ng-include src="'app/Component/Header/Admin/header.admin.html'" ></div>
+<div ng-include src="'app/Component/Dialog/AdminUser/AdminUser.dialog.html'" ></div>
+
+<!-- Body -->
+<div ng-controller="AdministrationController">
+
+    <md-card>
+        <md-card-content>
+
+            <div layout-margin layout="column" flex >
+                <div layout="row"  layout-align="center center" flex>
+
+                    <input type="text"  ng-model = 'searchCollab' placeholder = 'Filtrer la liste'/>
+
+                    <select ng-change="UpdateUsersList()" ng-model = 'userToGiveAccess' ng-disabled="$index === 1"
+                            ng-options=" user.firstName+' '+user.lastName for user in usersAdmin | filter:searchCollab">
+                        <option value=""> Selectionner un collaborateur </option>
+                    </select>
+
+                    <button  ng-click="clickToOpen(userToGiveAccess,1)">Modifier</button>
+
+                </div>
+
+            </div>
+
+        </md-card-content>
+    </md-card>
+
+
+    <div class="table-responsive-vertical shadow-z-1">
+        <table  class="table">
+            <thead>
+                <tr>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="user in usersAdmin | filter:{hasAccount:'true'}">
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.rank}}</td>
+                <td><button  ng-click="clickToOpen(user,0)">Modifier</button>
+            </tbody>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,16 @@
+<div ng-include src="'app/Component/Header/Admin/header.admin.html'" ></div>
+
+<div ng-controller="OrganigrammeController">
+
+    <div layout="row" layout-margin layout-sm="column" layout-align="center end">
+        <div>
+            <input  class="btn btn-default input-organigramme" type="file"  value="" ngf-select ng-model="file" >
+            <md-button class="md-raised md-primary" ng-click="UpdateOrga(file)">Remplacer</md-button>
+        </div>
+    </div>
+
+    <div id="organigramme" >
+        <img src="http://127.0.0.1:3000/api/chart" class="img-organigramme">
+    </div>
+
+</div>

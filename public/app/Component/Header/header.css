@@ -1,0 +1,79 @@
+.header-logo{
+ 	width:200px;
+ }
+ 
+ .header-link-home{
+ 	margin-right:25px;
+ }
+ 
+ md-toolbar .user-name ng-md-icon {
+     margin: 3px;
+ }
+ 
+ .md-fab {
+     background-color: rgba(250, 250, 250, 0) !important;
+     box-shadow: 0 0 0 !important;
+ }
+ 
+ #main-toolbar .md-button:hover {
+     background-color: rgba(250, 250, 250, 0.20) !important;
+ 
+ }
+ 
+ .sectionButton{
+    min-width : 30px;
+    margin-right:-10px;
+ }
+
+.md-toolbar-tools{
+    background-color: #00A0D7;
+ }
+
+ .inner-addon {
+     position: relative;
+     display: inline-block;
+     margin-left : 20px;
+     font-family: 'Roboto', sans-serif;
+ }
+ 
+ .inner-addon .glyphicon {
+   top:-2px;
+   position: absolute;
+   padding: 10px;
+   pointer-events: none;
+ }
+
+ .left-addon input  {
+     padding-left:  35px;
+ }
+
+
+#search{
+	    border: 1px solid #FFF;
+	    background-color: #00A0D7;
+	    border-radius: 8px;
+	    color: white;
+	    width:170px;
+}
+
+ .inner-addon select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+     border: 1px solid #FFF;
+     background-color: #00A0D7;
+     border-radius: 8px;
+     color: white;
+     height: 34px;
+     width: 180px;
+     font-size: 14px;
+     font-family: 'Roboto', sans-serif!important;
+ }
+
+.toto{
+      border-radius: 3px;
+      width: 40px;
+      margin: 5px;
+      margin-top: 15px;
+      margin-bottom: 0px;
+ }

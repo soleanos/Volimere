@@ -1,0 +1,14 @@
+.img-organigramme {
+	width:100%;
+}
+
+.div-ajout-organigramme {
+	text-align:right;
+	float:right;
+	margin-right:5%;
+	margin-bottom: 20px;
+}
+
+.input-organigramme {
+	display:inline-block !important;
+}

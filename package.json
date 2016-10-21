@@ -1,0 +1,38 @@
+{
+  "name": "trombi",
+  "version": "0.0.1",
+  "description": "Trombi V2 NodeJS AngularJS MongoDB ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter mocha-sonar-generic-test-coverage-file ./tests",
+    "postinstall": "cd public && npm install"
+  },
+  "keywords": [
+    "NodeJS",
+    "MongoDB",
+    "AngularJS"
+  ],
+  "author": "ExoTeam",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.0.0-rc.3",
+    "body-parser": "latest",
+    "chai": "^3.5.0",
+    "client-http": "0.0.7",
+    "express": "^4.13.4",
+    "express-json": "^1.0.0",
+    "express-session": "^1.13.0",
+    "image-size": "^0.5.0",
+    "istanbul": "^0.4.4",
+    "jimp": "latest",
+    "mocha": "^2.3.4",
+    "mocha-sonar-generic-test-coverage-file": "0.0.3",
+    "mongodb": "*",
+    "multer": "latest",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pdfkit": "^0.7.2",
+    "request": "^2.72.0",
+    "serve-favicon": "^2.3.0"
+  }
+}

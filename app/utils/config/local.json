@@ -1,0 +1,11 @@
+{
+  "path" : "D:\\Trombi\\public\\photo\\",
+  "pathResized" : "D:\\Trombi\\public\\photoResized\\",
+  "pathOrga" : "D:\\Trombi\\public\\orga\\",
+  "dbUrl":"mongodb://localhost:27017/TrombiDB",
+  "dbLogin":"",
+  "dbPassword":"",
+  "oldDbUrl":"mongodb://localhost:27017/prdTrombi",
+  "oldDbLogin":"",
+  "oldDbPassword":""
+}

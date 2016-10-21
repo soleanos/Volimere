@@ -1,0 +1,520 @@
+.customForm {
+    width: 50%;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 20px 2px lightgrey;
+    padding: 10px;
+    margin: 3em auto auto;
+}
+body{top:80px;}
+
+.footerUser {
+    position: absolute;
+    bottom: 0;
+}
+
+.photoPeople {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.people {
+    height: 155px;
+    text-align: center;
+    padding-top: 1em;
+    color : #053a4c;
+}
+
+.people:hover {
+    box-shadow: 1px 1px 10px 2px lightblue;
+}
+
+a:hover {
+    text-decoration : none;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+.downloadPdf {
+    float: right;
+    position: relative;
+}
+
+
+.largePhoto{
+    float : left;
+    margin-bottom: 1em;
+
+}
+
+.divLargePhoto {
+    text-align: center;
+      margin-right:15px;
+        margin-top:16px;
+}
+
+.labelModalUpdate {
+    text-align : left !important;
+}
+
+.labelImgModalUpdate {
+    padding-left: 7%;
+}
+
+.displayName{
+    text-align: center;
+    font-family: "HELVETICA", Times, serif;
+    font-size: 200%;
+    color : #3553b1;
+}
+
+.modal-dialog{
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* Safari and Chrome */
+    -moz-transform: translate(-50%, -50%); /* IE 9 */
+    -o-transform: translate(-50%, -50%); /* Safari and Chrome */
+    transform: translate(-50%, -50%)!important;
+    width : 48%;
+    max-height : 800px;
+    min-width: 350px;
+}
+
+.modal-body-first {
+    padding-right : 5%;
+    padding-left : 5%;
+    background-color: #dadada;
+}
+
+.toto{
+     border-radius: 3px;
+     width: 40px;
+     margin: 5px;
+     margin-top: 15px;
+     margin-bottom: 0px;
+}
+
+.modal-header, .modal-footer {
+	background-color: #E4E4E4;
+	text-align: center;
+}
+
+.modal-body input {
+    border-radius: 0;
+}
+
+.modal-body table tr:hover td {
+    background-color: transparent;
+}
+
+
+.modal-title {
+    text-transform : uppercase;
+    text-align: center;
+    font-weight: bold;
+    line-height: 2.5em;
+}
+
+.modal-header .close {
+    color: white;
+    background-color: blue;
+    height: 80%;
+    width: 6%;
+    font-size: 250%;
+    margin-top : -15px;
+    margin-right: -2%;
+}
+
+.tdModalUpPeople {
+    padding-top : 1em;
+}
+
+.btnModalUpdateCancel {
+    background-color : rgb(115, 115, 115) !important;
+    color : white;
+}
+
+.btnModalUpdateCancel:hover {
+    color : white;
+    background-color: #595959 !important;
+}
+
+.inputModal {
+    border : 1px #A0A0A0 solid;
+}
+
+.contactIconeImg {
+    height: 40px;
+}
+
+
+
+.footerUpdateCollab {
+    padding:0;
+    width: 100%;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.footerUpdateCollab input {
+    -webkit-flex: 2 1 auto;
+    -ms-flex: 2 1 auto;
+    flex: 2 1 auto;
+}
+
+.footerUpdateCollab .blank {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.footerUpdateCollab * {
+    text-transform: uppercase;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 0;
+}
+
+.bootstrap-tagsinput {
+    width : 100%;
+    border-radius: 0;
+    border: 1px #A0A0A0 solid;
+}
+
+.ui-helper-hidden-accessible {
+   display: none;
+}
+.ui-autocomplete {
+    z-index: 10000000;
+    cursor: default;
+    background: #FFFFFF;
+    border: 1px #c0c0c0 solid;
+    max-height: 200px;
+    max-width: 200px;
+    overflow-y: auto;
+    list-style: none;
+    padding-left: 0;
+
+    -moz-box-shadow: 1px 5px 5px 0 #cfcfcf;
+    -webkit-box-shadow: 1px 5px 5px 0 #cfcfcf;
+    -o-box-shadow: 1px 5px 5px 0 #cfcfcf;
+    box-shadow: 1px 5px 5px 0 #cfcfcf;
+}
+
+.ui-state-focus {
+    background: #89b3fe;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.ui-menu-item {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.result_from_ldap {
+    cursor: default;
+    background: #FFFFFF;
+    border: 1px #c0c0c0 solid;
+    max-height: 160px;
+    overflow-y: auto;
+    position: absolute;
+    top: 32px;
+    z-index: 6;
+    -moz-box-shadow: 1px 5px 5px 0 #cfcfcf;
+    -webkit-box-shadow: 1px 5px 5px 0 #cfcfcf;
+    -o-box-shadow: 1px 5px 5px 0 #cfcfcf;
+    box-shadow: 1px 5px 5px 0 #cfcfcf;
+}
+
+.res_ldap_user {
+    top : 1px;
+}
+
+.result_from_ldap .employee {
+    padding: 0 5px 0 5px;
+}
+
+.result_from_ldap .employee:hover {
+    background: #89b3fe;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.ldap-popup-visible {
+    visibility: visible;
+}
+
+.ldap-popup-hidden {
+    visibility: hidden;
+}
+
+.listOfCustomList {
+    width: 235px;
+}
+
+.listOfListLeftMenu {
+    width: 200px;
+}
+
+/*==============================*/
+/* Sidebar Styles */
+/*==============================*/
+.sidebar-wrapper {
+    position: fixed;
+    top : 100px;
+    left: 250px;
+    width: 19%;
+    max-width: 300px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background-color: #e6e6e6;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.search-users {
+    border-radius : 30px;
+}
+
+.tagsLeft {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tagBtn {
+    color : rgb(0, 160, 214);
+    background-color: white;
+    border-radius : 8px;
+    text-align : center;
+    line-height : 2em;
+    font-weight: bold;
+    margin : 8px 8px 8px 8px;
+    padding-right : 8px;
+    padding-left : 8px;
+    flex : auto;
+}
+
+.tagBtn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 12px 3px lightcyan;
+}
+
+.tagBtn.currentTag {
+    color : white;
+    background-color : rgb(0, 160, 214);
+}
+
+.listPeopleListEditing {
+    list-style: none;
+    box-shadow: 0 0 4px 1px lightgrey inset;
+}
+
+.glyphicon-remove{
+    color:red;
+}
+
+/*==========================================*/
+/* MENU INDEX                               */
+/*==========================================*/
+.menuInIndex {
+    position : fixed;
+    z-index : 5;
+    width: 100%;
+    top : 50px;
+    left: 0;
+    background-color: rgb(0, 160, 215);
+    box-shadow: 0 1px 8px 1px #bbbbbb;
+}
+
+.menuInIndex * {
+    color : #053a4c;
+    font-weight: bold;
+}
+
+.user-search {
+    margin-top: 20px;
+    margin-bottom : 20px;
+}
+
+.navbar-nav .active a {
+    color: white;
+}
+
+.accueil:hover {
+    color : #053a4c !important;
+}
+
+.menuButtonIndex {
+    padding-top : 1em;
+    padding-left: 1em;
+}
+
+.menuInIndex a:focus {
+    background-color: rgb(0, 160, 215);
+}
+
+.menuInIndex a:visited {
+    background-color: rgb(0, 160, 215);
+}
+
+.menuInIndex a:active {
+    background-color: rgb(0, 160, 215);
+}
+/*==========================================*/
+/*TOP MENU                                  */
+/*==========================================*/
+.containerTopMenu {
+    background-color: rgb(0, 160, 215);
+}
+
+.titreApp {
+    text-align: center;
+}
+
+.navbar-fixed-top {
+    border-color: #ffffff;
+}
+
+.infoMenu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    position: relative;
+    right: 25px;
+    top: 20px;
+}
+
+.infoMenu * {
+    color : #053a4c;
+    text-transform : uppercase;
+}
+
+.textTopMenu {
+    padding-right : 50px;
+}
+
+.textTopMenu:hover {
+    color: #000000;
+}
+
+.navbar-brand img {
+    position: relative;
+    top: -7px;
+    left: 10%;
+}
+
+
+/*======================================*/
+/* liste personne                       */
+/*======================================*/
+.listPersonne {
+    margin-top: 110px;
+    float : right;
+    margin-bottom : 80px;
+    width: 80%;
+}
+
+/*=============================*/
+/* footer*/
+/*=============================*/
+
+footer {
+    background-color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: -15px;
+    right: 0;
+    border-top : 6px solid rgb(0, 160, 215);
+}
+
+footer h6 {
+    margin-top : -3px;
+}
+
+
+body {
+    position : relative;
+    color : #053a4c;
+}
+
+.btn-danger {
+    background-color: rgb(255,61,41);
+}
+
+.imgPeople {
+    transition: opacity 0.5s ease-in;
+    width:133px;
+    height:100px;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-content{
+    width:600px;
+}
+
+@media (max-width: 992px) {
+
+    .sidebar-wrapper {
+        position : static;
+        width: 100%;
+        /*margin-top: 80px;*/
+        margin-left: 0;
+        max-width: initial;
+    }
+
+    .listPersonne {
+        margin-top: 0;
+        float : none;
+        width: 100%;
+    }
+
+    .footerUpdateCollab {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .footerUpdateCollab input {
+        margin: 6px;
+    }
+
+    .tdModalUpPeople {
+        padding-top : 0;
+    }
+
+    .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .textTopMenu {
+        padding-right : 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin: 0;
+    }
+
+    .sidebar-wrapper {
+        margin-top : 220px;
+    }
+}

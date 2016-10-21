@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Trombi </title>
+
+        <!--Angular Libs -->
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-route/angular-route.js"></script>
+        <script src="node_modules/angular-messages/angular-messages.js"></script>
+        <script src="node_modules/angular-resource/angular-resource.js"></script>
+        <script src="node_modules/angular-aria/angular-aria.js"></script>
+        <script src="node_modules/angular-animate/angular-animate.js"></script>
+
+        <script src="node_modules/angular-material/angular-material.js"></script>
+        <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+
+        <script src="node_modules/angular-material-icons/angular-material-icons.js"></script>
+        <link rel="stylesheet" href="node_modules/angular-material-icons/angular-material-icons.css">
+
+
+        <script src="node_modules/ng-dialog/js/ngDialog.js"></script>
+        <link rel="stylesheet" href="node_modules/ng-dialog/css/ngDialog.css">
+        <link rel="stylesheet" href="node_modules/ng-dialog/css/ngDialog-theme-default.css">
+        <link rel="stylesheet" href="node_modules/ng-dialog/css/ngDialog-theme-plain.css">
+
+        <script src="node_modules/ng-dialog/js/ngDialog.js"></script>
+
+        <!--Own pages-->
+
+        <script src="app/app.js"></script>
+
+        <script src="app/User/users.controller.js"></script>
+        <script src="app/User/users.route.js"></script>
+
+        <script src="app/Authentication/authentication.route.js"></script>
+        <script src="app/Authentication/authentication.controller.js"></script>
+
+        <script src="app/Admin/admin.route.js"></script>
+        <script src="app/Admin/admin.controller.js"></script>
+
+        <script src="app/Organigramme/organigramme.route.js"></script>
+        <script src="app/Organigramme/organigramme.controller.js"></script>
+
+        <script src="app/services/users.service.js"></script>
+        <script src="app/services/authentication.service.js"></script>
+        <script src="app/services/utils.service.js"></script>
+        <script src="app/services/LDAPService.js"></script>
+
+        <!--Components-->
+
+        <script src="app/Component/Dialog/AddUser/addUser.dialog.controller.js"></script>
+
+        <script src="app/Component/Dialog/UpdateUser/updateUser.dialog.controller.js"></script>
+        <script src="app/Component/Header/Admin/header.admin.controller.js"></script>
+
+        <script src="app/Component/Dialog/AdminUser/adminUser.dialog.controller.js"></script>
+
+        <!--Upload images -->
+        <script src="node_modules/ng-file-upload/dist/ng-file-upload-shim.js"></script>
+        <script src="node_modules/ng-file-upload/dist/ng-file-upload.js"></script>
+
+        <!--Bootstrap -->
+         <link rel="stylesheet" href="node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+         <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+         <!-- CSS Files -->
+
+         <link rel="stylesheet" href="app/Component/Dialog/dialog.css">
+
+        <link rel="stylesheet" href="app/Organigramme/organigramme.css">
+
+        <link rel="stylesheet" href="app/User/user.css">
+        <link rel="stylesheet" href="app/Component/Header/header.css">
+
+        <!--Others -->
+          <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+          <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    </head>
+
+    <body ng-app="Trombi">
+
+        <md-content ng-view>
+
+        </md-content>
+
+    </body>
+
+</html>

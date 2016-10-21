@@ -1,0 +1,62 @@
+<script type="text/ng-template" id="templateUpdateUserDialog">
+    <div id="target"  ng-init="initUpdateUserDialog()" ng-controller="updateUserControllerDialog" >
+
+        <div flex class ="modal-header">
+            <h4 class="modal-title">Modifier un collaborateur</h4>
+        </div>
+
+        <div layout="row" layout-margin layout-sm="column">
+            <div  flex>
+                <div ng-hide="hideDefaultPicture" class="ng-hide" ng-if="userSelected">
+                    <img class="img-responsive" id="largePhoto" src="{{userSelected.fullLinkPicture}}"   ngf-resize="{width: 50, height: 50}">
+                </div>
+
+                <div ng-show="showUpdatedPicture">
+                    <img class="img-responsive"  ngf-src="file"  ngf-background="file" >
+                </div>
+            </div>
+            <div layout-margin layout="column" flex >
+                <div layout="row"  layout-align="center center" flex>
+                    <a href="sip:{{userSelected.mail}}" id="lyncContact" title="Ajouter à Lync">
+                        <img class="toto" src="app/images/icon-lync.png" alt="Lync" />
+                    </a>
+                    <a href= "mailto:{{userSelected.mail}}" id="mailContact" title="Envoyer un mail">
+                        <img class="toto" src="app/images/icon-outlook.png" alt="Outlook" />
+                    </a>
+                </div>
+                <div layout="column" layout-align="center center">
+                    <label  flex >Modifier la photo</label>
+                    <div  flex>
+                        <input class = "form-control inputModal" type="file"
+                               onchange="angular.element(this).scope().refreshPicture()" id="file"
+                               name="file" accept="image/*" value="" ngf-select ng-model="file" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div layout="column" layout-margin layout-sm="column">
+            <label for="firstName-updateCollab">PRÉNOM</label>
+            <div flex>
+                <input type="text" ng-model="userSelected.firstName"
+                       class="form-control inputModal" id="firstName-updateCollab"
+                       name="firstName-updateCollab" required>
+            </div>
+        </div>
+        <div layout="column" layout-margin layout-sm="column">
+            <label for="firstName-updateCollab">NOM</label>
+            <div flex>
+                <input ng-model="userSelected.lastName" type="text"
+                       class="form-control inputModal" id="lastName-updateCollab"
+                       name="lastName-updateCollab" required>
+            </div>
+        </div>
+        <div layout="column" layout-margin layout-sm="column" ng-show="typeUser">
+            <label for="firstName-updateCollab" >TAGS</label>
+            <md-chips ng-model="tags"></md-chips>
+        </div>
+        <div layout="row"class="modal-footer">
+            <md-button class="md-raised md-button" ng-click="UpdateUtilisateur(userSelected,file)" ng-show="typeUser">Modifier</md-button>
+            <md-button class="md-raised md-warn" ng-click="RemoveUser(userSelected)" ng-show="typeUser">Supprimer</md-button>
+        </div>
+    </div>
+</script>

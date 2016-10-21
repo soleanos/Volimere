@@ -1,0 +1,11 @@
+{
+  "path" : "/var/apps/devTrombi2/ressources/photo",
+  "pathResized" : "/var/apps/devTrombi2/ressources/photoResized",
+  "pathOrga" : "/var/apps/devTrombi2/ressources/orga",
+  "dbUrl":"mongodb://localhost:27094/TrombiDB",
+  "dbLogin":"",
+  "dbPassword":"",
+  "oldDbUrl":"mongodb://localhost:27090/devTrombi",
+  "oldDbLogin":"",
+  "oldDbPassword":""
+}

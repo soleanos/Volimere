@@ -1,0 +1,23 @@
+<div ng-include src="'app/Component/Header/Admin/header.admin.html'" ></div>
+<div ng-include src="'app/Component/Dialog/UpdateUser/updateUser.dialog.html'" ></div>
+
+
+<div layout="row" layout-align="center center" ng-controller="UsersController">
+    <div layout="column" flex="90" layout-wrap  >
+        <div  layout="row" layout-wrap layout-margin layout-align="center center">
+            <div  ng-repeat="user in users "  ng-click="openUpdateUserDialog($index)" flex-gt-md="10" flex-gt-sm="5" flex-md="5">
+                <div layout="column" layout-align="center center" >
+                    <div  layout="row"  flex>
+                        <img  ng-src="http://127.0.0.1:3000/api/user/{{user.matricule}}/picture"  class ="imgPeople"/></br></div>
+                    <div  layout="row" class="legend" flex >{{user.firstName}}</div>
+                    <div  layout="row" class="legend">{{user.lastName}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div ng-include src="'app/Component/Footer/footer.html'" ></div> -->
+
+
+

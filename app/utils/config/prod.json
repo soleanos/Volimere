@@ -1,0 +1,11 @@
+{
+  "path" : "/var/apps/prdTrombi2/ressources/photo",
+  "pathResized" : "/var/apps/prdTrombi2/ressources/photoResized",
+  "pathOrga" : "/var/apps/prdTrombi2/ressources/orga",
+  "dbUrl":"mongodb://localhost:27097/TrombiDB",
+  "dbLogin":"admin",
+  "dbPassword":"Y4wt9wYW",
+  "oldDbUrl":"mongodb://localhost:27091/prdTrombi",
+  "oldDbLogin":"admin",
+  "oldDbPassword":"Y4wt9wYW"
+}

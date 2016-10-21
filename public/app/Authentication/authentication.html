@@ -1,0 +1,37 @@
+<!--<div layout="row" layout-align="center center">
+    <div layout="column">
+        <h1>Connexion Trombinoscope</h1>
+
+        <md-input-container>
+            <label>Login</label>
+            <input type="text" ng-model="user.login">
+        </md-input-container>
+
+        <md-input-container >
+            <label>Mot de passe</label>
+            <input type="text" ng-model="user.password">
+        </md-input-container>
+
+        <md-button class="md-raised md-primary" ng-click="connect()">Connection</md-button>
+    </div>
+</div>-->
+
+<div class="container">
+
+    <div class="col-sm-6 col-sm-offset-3">
+
+        <h1><span class="fa fa-sign-in"></span> Connexion</h1>
+
+            <div class="form-group">
+                <label>Login</label>
+                <input type="text" class="form-control" ng-model="user.login">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" ng-model="user.password">
+            </div>
+
+            <md-button class="md-raised md-primary btn btn-warning btn-lg" ng-click="connect()">Login</md-button>
+    </div>
+</div>
+

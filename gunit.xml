@@ -1,0 +1,7 @@
+<unitTest version="1">
+	<file path="tests\UserDaoTest.js">
+		<testCase name="Users service: les morts ne racontent pas d histoires" duration="0">
+			<skipped message="les morts ne racontent pas d histoires"></skipped>
+		</testCase>
+	</file>
+</unitTest>

@@ -1,0 +1,63 @@
+<div ng-include src="'app/Component/Dialog/AddUser/addUser.dialog.html'" ></div>
+
+
+
+<md-toolbar>
+        <div class="md-toolbar-tools" layout="row" layout-wrap >
+
+            <section layout-align="start center"flex="15" >
+                <a href="./#/users" ><img class = "header-logo" src="app/images/header-logo.svg" alt="Logo Trombi" /></a>
+            </section>
+
+            <section layout-align="center center"flex="13" style='background-color:#00A0D7;'>
+
+                <md-button aria-label= "logo" class="sectionButton" ng-controller="headerAdminController" ng-click = "generatePdf()">
+                    <md-icon  md-svg-icon="app/images/header-pdf.svg"></md-icon>
+                </md-button>
+
+                <md-button aria-label = "pdf" class="sectionButton" ng-controller="headerAdminController" ng-click="openAddUserDialog()" ng-show="typeUser">
+                    <md-icon  md-svg-icon="app/images/header-add.svg"></md-icon>
+                </md-button>
+
+                <md-button aria-label = "tag" class="sectionButton" ng-controller="headerAdminController" ng-click = "" >
+                    <md-icon  md-svg-icon="app/images/header-hashtags.svg"></md-icon>
+                </md-button>
+
+                <md-button aria-label= "organigramme" class="sectionButton" ng-controller="headerAdminController" ng-click="openChart()" >
+                    <md-icon  md-svg-icon="app/images/icon-organigramme.svg"></md-icon>
+                </md-button>
+
+                <div class="inner-addon left-addon header-input">
+                    <i class="glyphicon glyphicon-search"></i>
+                    <input ng-controller="headerAdminController" id="search" type="text" class="form-control" ng-model = 'searchCollab' ng-init="searchCollab=''">
+                </div>
+
+                <div class="inner-addon left-addon">
+                    <select ng-controller="headerAdminController"   ng-change="UpdateUsersList()" ng-model = 'filterSelected' ng-options="filter.label for filter in filters">
+                        <option value=""> Choisir un filtre </option>
+                    </select>
+                </div>
+            </section>
+
+            <div flex></div>
+            <section layout="row" layout-align="end center" style='background-color:#00A0D7;'>
+
+                <md-button aria-label = "tag" class="sectionButton" ng-controller="headerAdminController" ng-click = "openAdmin()" ng-show="typeUser">
+                    <md-icon  md-svg-icon="app/images/header-admin.svg"></md-icon>
+                </md-button>
+
+                <md-button aria-label = "tag" class="sectionButton" ng-controller="headerAdminController" ng-click="logout()" >
+                    <md-icon  md-svg-icon="app/images/header-logout.svg"></md-icon>
+                </md-button>
+            </section>
+        </div>
+</md-toolbar>
+
+<!--<div ng-controller="headerAdminController" ng-cloak ng-show="showTag">
+    <md-content class="md-padding">
+        <md-nav-bar nav-bar-aria-label="search tags">
+            <md-nav-item ng-repeat="tag in tags">{{tag}}}}</md-nav-item>
+        </md-nav-bar>
+    </md-content>
+</div>-->
+

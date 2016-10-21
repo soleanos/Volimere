@@ -1,0 +1,40 @@
+<script type="text/ng-template" id="adminUserDialog">
+    <div id="target" ng-init="ModifUserClient()" ng-controller="adminUserControllerDialog" >
+
+        <div layout="column" layout-margin layout-sm="column">
+
+            <div layout="column"  layout-sm="column" flex >
+                <label  flex >Prénom : </label>
+                <div flex>
+                    <input type="text" ng-model="unUser.firstName"
+                           class="form-control inputModal"  required>
+                </div>
+            </div>
+
+            <div layout="column"  layout-sm="column" flex>
+                <label  flex >Nom : </label>
+                <div flex>
+                    <input type="text" ng-model="unUser.lastName"
+                           class="form-control inputModal"  required>
+                </div>
+            </div>
+
+            <div layout="column"  layout-sm="column" flex >
+                <label  flex >Type : </label>
+                <div flex>
+                    <select name="singleSelect" ng-model="unUser.rank">-->
+                        <option value="Administrateur">Administrateur</option>
+                        <option value="Collaborateur">Collaborateur</option>
+                    </select>
+                </div>
+            </div>
+
+            <div layout="row"class="modal-footer" flex>
+                <md-button flex class="md-raised md-button" ng-click="UpdateUtilisateur(unUser)">{{btnLabelMaj}}</md-button>
+                <md-button ng-show="showDeleteAccess" class="md-raised md-warn"
+                           ng -click="deleteAcess(unUser)">Supprimer l'accès</md-button>
+            </div>
+
+        </div>
+    </div>
+</script>

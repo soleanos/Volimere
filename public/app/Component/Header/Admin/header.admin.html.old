@@ -1,0 +1,90 @@
+<div ng-include src="'app/Component/Dialog/AddUser/addUser.dialog.html'" ></div>
+
+<header xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Logo -->
+                <a class="header-link-home header-logo" href="./" >
+                    <img class="header-logo" src="app/images/header-logo.svg"
+                         alt="Logo Trombi" />
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+
+                    <!-- Icones/liens -->
+                    <li>
+                        <a style="display:inline-block;width: 40px;" ng-controller="headerAdminController" ng-click = "generatePdf()">
+                            <img class="icon-left" src="app/images/header-pdf.svg" alt="Générer PDF"/>
+                        </a>
+
+                        <a style="display:inline-block; width: 40px;" ng-controller="headerAdminController" ng-click="openAddUserDialog()">
+                            <img class="icon-left" id="add-btn" src="app/images/header-add.svg" alt="Ajouter collaborateur"/>
+                        </a>
+
+                        <a href style="display:inline-block;  width: 35px;"  ng-click="setTagBar()">
+                            <img class="icon-left" id="hashtag-btn" src="app/images/header-hashtags.svg" alt="Hashtags"/>
+                        </a>
+
+                        <a style="display:inline-block;  width: 35px;" ng-controller="headerAdminController" ng-click="openChart()" title="Organigramme" >
+                            <img class="icon-left" src="app/images/icon-organigramme.svg" title="Organigramme"
+                                 alt="Organigramme"/>
+                        </a>
+
+                        <div class="inner-addon left-addon header-input" style="display:inline-block; ">
+                            <i class="glyphicon glyphicon-search"></i>
+                            <input id="search" type="text" class="form-control" ng-model = 'searchCollab' ng-init="searchCollab=''"
+                                   title="Rechercher un collaborateur"/>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner-addon left-addon">
+
+                            <select ng-controller="UsersController"   ng-change="UpdateUsersList()" ng-model = 'filterSelected' ng-options=" filter.label for filter in filters">
+                                <option value=""> Choisir un filtre</option>
+                            </select>
+
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div style = "display:inline-block;" class="header-action header-admin">
+                            <a style="display:inline-block;  width: 35px;" ng-click="openAdmin()" title="Administration">
+                                <img class="icon-admin" src="app/images/header-admin.svg" alt="Administration" /></a>
+                        </div>
+
+                        <div style = "display:inline-block;">
+                            <a href="logout" title="Déconnexion" class="header-logout">
+                                <img class="header-action " src="app/images/header-logout.svg" alt="Déconnexion" /></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <tr ng-repeat="tag in LesTags">
+        <td>{{tag.name}}</td>
+
+        <div id="tagbar" ng-show="tagBar">
+            <button id="buttonHelpTags" type="button" class="btn btn-info btn-lg"
+                    data-toggle="modal" data-target="#helpTags">????</button>
+            <li style='display: inline-block' class='checkTag checkbox checkbox-primary'>
+                <input aria-label='Single checkbox' type='checkbox' id='tagEditBox' name='TagEdit' value='multi'>
+                <label>editTag</label>
+            </li>
+            <li id="taglist" style="display: inline-block"></li>
+        </div>
+    </tr>
+</header>
+

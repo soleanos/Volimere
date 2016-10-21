@@ -1,0 +1,31 @@
+.modal-header, .modal-footer{
+    background-color: #E4E4E4;
+    text-align:center;
+}
+
+.modal-footer button{
+    width: calc(50% - 5px);
+    border-radius: 2px;
+}
+
+.find-file-add {
+
+        width: 100%;
+        margin-bottom: 10px;
+        border: solid 1px #999999!important;
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px;
+        padding-left: 7px;
+        padding-right: 25px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        text-align: left;
+
+}
+
+.img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
